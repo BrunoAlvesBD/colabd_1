@@ -1,0 +1,309 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background: linear-gradient(to right, #f8801f, #04592f);
+  color: #faffff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between; /* Logo à esquerda, páginas à direita */
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; /* Adiciona margem à direita para melhor alinhamento */
+}
+
+
+.logo img {
+  width: 11vw;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 5px;
+}
+
+.hamburger.active {
+  background-color: tomato;
+  border-radius: 5px;
+}
+
+.navigation {
+  display: flex;
+  gap: 10px;
+  
+}
+
+.navigation button {
+  background: linear-gradient(to right, #f8801f, #04592f);
+  color: #faffff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    display: none; /* As páginas só aparecem quando o botão é clicado */
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .logo {
+    justify-content: flex-end; /* Nome das páginas à direita em telas menores */
+  }
+
+  .navigation.visible {
+    display: flex;
+  }
+}
+
+footer {
+  background: linear-gradient(to right, #f8801f, #04592f);
+  color: #faffff;
+  padding: 15px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .logo img {
+    width: 60px; /* Aumenta o tamanho do logo em telas menores */
+  }
+}
+.pageLinks {
+  display: flex;
+  align-items: center;
+}
+
+
+/*home-----------------------------------------------------------*/
+.intro-section,
+.reasons-section,
+.services-section,
+.how-it-works-section,
+.contact-section {
+  margin-bottom: 30px;
+  background-color: #f5f5f5; /* Cor de fundo em tom pastel */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h2 {
+  color: #4d4d4d; /* Cor de texto mais escura */
+}
+
+ul,
+ol {
+  padding-left: 20px;
+  color: #666; /* Cor de texto mais suave */
+}
+
+.pricing {
+  /* Adicione estilos para a seção de preços e serviços */
+  color: #333; /* Cor de texto padrão */
+}
+
+.pricing-option {
+  margin-bottom: 15px;
+}
+
+.pricing-option p {
+  margin: 0;
+}
+/* Adicione ao seu arquivo CSS */
+.pricing-option p span.price {
+  font-weight: bold; /* Destaque de texto para os números */
+  color: #f8801f; /* Cor de destaque para os números */
+}
+
+footer p {
+  color: #fff7f7; /* Cor de texto mais suave */
+}
+
+@media (max-width: 768px) {
+  .intro-section,
+  .reasons-section,
+  .services-section,
+  .how-it-works-section,
+  .contact-section {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 20px; /* Reduz o tamanho do título em telas menores */
+  }
+
+  ul,
+  ol {
+    font-size: 14px; /* Reduz o tamanho do texto em listas em telas menores */
+  }
+}
+
+/* Adicione no seu arquivo CSS */
+.responsive-image {
+  width: 100%; /* Ocupa a largura total */
+  height: auto; /* Mantém a proporção original */
+  max-width: 600px; /* Define a largura máxima desejada em telas grandes */
+  display: block; /* Para centralizar a imagem usando margin */
+  margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
+
+/* Adicione ao seu arquivo CSS */
+
+.how-it-works-section {
+  padding: 20px;
+  background-color: #f5f5f5; /* Cor de fundo em tom pastel */
+  border-radius: 8px;
+}
+
+.how-it-works-section h2 {
+  color: #333; /* Cor de texto padrão */
+}
+
+.steps-list {
+  list-style-type: decimal; /* Estilo da lista numerada */
+  padding-left: 20px;
+}
+
+.additional-info {
+  margin-top: 20px;
+}
+
+.additional-info p {
+  margin-bottom: 10px;
+  color: #666; /* Cor de texto mais suave */
+}
+
+/*Networking------------------------------*/
+.contact-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 600px) {
+  .contact-form-container {
+    padding: 20px;
+  }
+
+  #contactForm {
+    gap: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/*Planos--------------------------*/
+/* Planos.css */
+
+.service-cards-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.service-card {
+  width: 300px;
+  margin: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.service-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.service-card h3 {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+.service-card p {
+  font-size: 1em;
+  color: #333;
+}
+/*carrocel--------------------------------------*/
+/* Carousel.css */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 95%;
+  transform: translateY(-50%);
+  background-color: tomato;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25%;
+
+}
+
+.carousel-btn:hover {
+  background-color: tomato;
+  border-radius: 25%;
+
+}
