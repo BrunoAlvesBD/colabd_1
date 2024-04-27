@@ -1,6 +1,7 @@
 // Home.js
 
 import servicosHome from "../imagens/servicosHome.png";
+import home1 from "../imagens/home1.png";
 export default function Home() {
   return (
     <div className="container">
@@ -9,6 +10,12 @@ export default function Home() {
       </header>
 
       <section className="intro-section">
+      <img
+          src={home1} // Substitua pelo caminho real da sua imagem
+          alt="Home"
+          className="responsive-image" // Adicione uma classe para estilos adicionais
+          style={{ width: '100%', height: '33%' }} // Estilos para tornar a imagem responsiva
+        />
         <p>
           Seja você um empreendedor visionário ou alguém em busca de um ambiente inspirador para trabalhar, nosso espaço compartilhado de trabalho é o lugar ideal para potencializar suas ideias e promover a ampliação de sua rede de contatos. Localizado estrategicamente no Centro de Fazenda Rio Grande, oferecemos um ambiente moderno, colaborativo e repleto de recursos para impulsionar o seu sucesso.
         </p>
